@@ -22,7 +22,8 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "calculator",
-    pattern: "{controller=Operations}/{action}/{num1:int}/{num2:int}/"
+    pattern: "{controller=Operations}/{action}/{num1:int}/{num2:int}/",
+    defaults: new {num1 = 0, num2 = 0}
     );
 
 

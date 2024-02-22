@@ -26,8 +26,14 @@ namespace Act2___BasicRouting.Controllers
         }
         public IActionResult Divide(int num1, int num2)
         {
-            float quot = ((float)num1 / (float)num2);
-            return Content($"{num1} / {num2} = {quot}");
+            if ((num2 > 0)) {
+                float quot = ((float)num1 / (float)num2);
+                return Content($"{num1} / {num2} = {quot}");
+            }
+            else
+            {
+                return Content("Num2 cannot be 0!");
+            }
         }
 
 
